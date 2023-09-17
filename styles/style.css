@@ -1,3 +1,104 @@
-body {
-    background-color: red;
+:root{
+  --main-bg-color: #e13d3d; /* background du body */
+  --affichage-bg-color: #aa0000; /* background de l'affichage */
+  --button-hover-color: #ff9999; /* background des boutons au hover */
+  --buton-color: #aa0000; /* background des boutons */
 }
+
+body {
+  background-color: var(--main-bg-color);
+}
+#affichage {
+  width: 300px; 
+  background-color:  var(--affichage-bg-color); 
+  border-radius: 20px; 
+  text-align: center; 
+  padding: 20px; 
+  margin: 0 auto; 
+}
+
+#affichage p {
+  display: inline-block; 
+  width: 45%; 
+  padding: 10px; 
+  margin: 5px; 
+  border: 2px solid #552828; 
+  border-radius: 10px; 
+}
+#travail{
+  background-color: #e13d3d; /*couleur du travail*/
+}
+#pause{
+  background-color: #94c7a8; /*couleur de la pause*/
+}
+
+#affichage p {
+  font-family: Arial, sans-serif;
+  color: #3a3750;
+}
+
+/* Media query to make the paragraphs stack on smaller screens */
+@media (max-width: 600px) {
+  #affichage p {
+    width: 100%;
+  }
+}
+
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px; 
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  display: flex;
+}
+
+#buttons{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+/* Hover effect */
+button:hover {
+  background-color: var(--button-hover-color) ;
+  color: #333; /* Dark text color */
+}
+  
+
+button {
+  background-color: var(--buton-color); 
+  color: #fff; /* White text color */
+  
+}
+#circle {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(198, 198, 198);
+  border-radius: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+#timer{
+  padding-top: 35%;
+  font-family: monospace;
+  font-size: 24px;
+  text-align: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
