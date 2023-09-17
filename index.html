@@ -12,17 +12,18 @@
     <body>
         <header>TIMER POMODORO</header>
         <div id="affichage">
-            <p>travail</p>
-            <p>pause</p>
+            <p id="travail">travail</p>
+            <p id="pause">pause</p>
         </div>
-
-        <div id="timer"></div>
-
+        <div id="circle">
+            <div id="timer">00:00</div>
+        </div>
         <div id="boutons">
-            <button id="play">play</button>
-            <button id="stop">stop</button>
+            <button id="play"><i class="fa-solid fa-play"></i></button>
+            <button id="stop"><i class="fa-solid fa-stop"></i></button>
         </div>
         <footer>Exercice Javascript - @VictorFriboulet</footer>
         <script src="sripts/script.js" async defer></script>
+        <script src="https://kit.fontawesome.com/9afb374bbc.js" crossorigin="anonymous"></script>
     </body>
 </html>
