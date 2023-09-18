@@ -24,6 +24,16 @@
             <button id="stop"><i class="fa-solid fa-stop"></i></button>
         </div>
         </main>
+        <button id="parameters"><i class="fa-solid fa-cog"></i></button>
+        <div id="parametres">
+            <p>Temps de travail(<div id="tempsTravail">0</div>min)</p>
+            <div  class="slidecontainer">
+                <input id="SliderTempsTravail" type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+            <p>Temps de pause(<div id="tempsPause">0</div>min)</p>
+            <div class="slidecontainer">
+                <input id="SliderTempsPause"type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
         <footer>Exercice Javascript - @VictorFriboulet</footer>
         <script src="sripts/script.js" async defer></script>
         <script src="https://kit.fontawesome.com/9afb374bbc.js" crossorigin="anonymous"></script>
