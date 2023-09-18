@@ -69,12 +69,6 @@ header {
   color: #3a3750;
 }
 
-/* Media query to make the paragraphs bigger on smaller screens*/
-@media (max-width: 600px) {
-  #affichage p {
-    width: 70%%;
-  }
-}
 
 button {
   display: inline-block;
