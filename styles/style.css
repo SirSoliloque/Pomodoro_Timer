@@ -5,6 +5,30 @@ body{
   --button-color: #aa0000; /* background des boutons */
 }
 
+/*HEADER*/
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+  background: linear-gradient(to left, #f46b45, #eea849);
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+}
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*BODY*/
+
 body {
   background-color: var(--main-bg-color);
 }
@@ -45,10 +69,10 @@ header {
   color: #3a3750;
 }
 
-/* Media query to make the paragraphs stack on smaller screens */
+/* Media query to make the paragraphs bigger on smaller screens*/
 @media (max-width: 600px) {
   #affichage p {
-    width: 100%;
+    width: 70%%;
   }
 }
 
