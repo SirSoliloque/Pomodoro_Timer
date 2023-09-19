@@ -108,12 +108,16 @@ slider_travail.oninput = function() {
     work = true;
     output_travail.innerHTML = this.value;
     duree_travail = this.value*60;
-    stockage.setItem("duree_travail", duree_travail);
+    if(typeof stockage !== 'undefined'){
+        stockage.setItem("duree_travail", duree_travail);
+    }
     timer = duree_travail;
     horloge.innerHTML = new Date(1000 * timer).toISOString().substring(11, 19);
 }
 slider_pause.oninput = function() {
     output_pause.innerHTML = this.value;
     duree_pause = this.value;
-    stockage.setItem("duree_pause", duree_pause);
+    if(typeof stockage !== 'undefined'){
+        stockage.setItem("duree_pause", duree_pause);
+    };
 }
