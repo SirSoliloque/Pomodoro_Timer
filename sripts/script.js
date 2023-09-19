@@ -22,6 +22,7 @@ stopButton.addEventListener("click", function(){
     }else{
         work = true;
         timer = duree_travail;
+        change_color();
     }
     horloge.innerHTML = new Date(1000 * timer).toISOString().substring(14, 19);
     stopButton.style.setProperty("display","none");
