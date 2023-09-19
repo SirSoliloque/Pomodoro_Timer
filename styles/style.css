@@ -110,8 +110,8 @@ button {
   
 }
 #circle {
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   background-color: rgb(198, 198, 198);
   border-radius: 50%;
   margin-right: auto;
@@ -129,4 +129,39 @@ button {
 }
 #stop{
   display: none;
+}
+#tempsTravail{
+  display: inline;
+}
+#tempsPause{
+  display: inline;
+}
+#parametres p{
+  display: inline;
+}
+/* Define the track styles */
+input[type="range"] {
+  width: 100%; /* Set the width of the slider */
+  height: 10px; /* Set the height of the slider */
+  -webkit-appearance: none; /* Remove the default styles on Safari */
+  appearance: none;
+  background: #FCB005; /* Use an orange background to contrast with red and teal*/
+  border-radius: 5px; /* Rounded corners for the track */
+}
+
+/* Style the thumb (the draggable part of the slider) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove the default styles on Safari */
+  appearance: none;
+  width: 20px; /* Set the width of the thumb */
+  height: 20px; /* Set the height of the thumb */
+  background-color: #bc8300; /* Thumb color */
+  border: 2px solid #333; /* Border around the thumb */
+  border-radius: 50%; /* Rounded shape for the thumb */
+  cursor: pointer; /* Show a pointer cursor on hover */
+}
+
+/* Style the slider when it's in its active (dragged) state */
+input[type="range"]:active::-webkit-slider-thumb {
+  background-color: #333; /* Change thumb color on active state */
 }
