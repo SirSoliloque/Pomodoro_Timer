@@ -1,17 +1,16 @@
 let duree_travail = 1800;
 let duree_pause = 1800;
 try {
-    const stockage = window.localStorage;
-
-    if (stockage.getItem("duree_travail") !== null) {
-        duree_travail = parseInt(stockage.getItem("duree_travail"));
+    if (localStorage.getItem("duree_travail") !== null) {
+        duree_travail = parseInt(localStorage.getItem("duree_travail"));
     }
 
-    if (stockage.getItem("duree_pause") !== null) {
-        duree_pause = parseInt(stockage.getItem("duree_pause"));
+    if (localStorage.getItem("duree_pause") !== null) {
+        duree_pause = parseInt(localStorage.getItem("duree_pause"));
     }
 } catch (error) {
     console.log(error);
+    console.log("localStorage n'est pas supporté");
 }
 
 
@@ -108,16 +107,22 @@ slider_travail.oninput = function() {
     work = true;
     output_travail.innerHTML = this.value;
     duree_travail = this.value*60;
-    if(typeof stockage !== 'undefined'){
-        stockage.setItem("duree_travail", duree_travail);
-    }
+    try{
+        localStorage.setItem("duree_travail", duree_travail);
+    }catch (error){
+        console.log(error);
+        console.log("localStorage n'est pas supporté");
+    };
     timer = duree_travail;
-    horloge.innerHTML = new Date(1000 * timer).toISOString().substring(11, 19);
+    horloge.innerHTML = new Date(1000 * timer).toISOString().substring(11,19);
 }
 slider_pause.oninput = function() {
     output_pause.innerHTML = this.value;
     duree_pause = this.value;
-    if(typeof stockage !== 'undefined'){
-        stockage.setItem("duree_pause", duree_pause);
+    try{
+        localStorage.setItem("duree_pause", duree_pause);
+    } catch (error){
+        console.log(error);
+        console.log("localStorage n'est pas supporté");
     };
 }
