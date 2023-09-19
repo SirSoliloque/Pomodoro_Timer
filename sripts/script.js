@@ -118,7 +118,7 @@ slider_travail.oninput = function() {
 }
 slider_pause.oninput = function() {
     output_pause.innerHTML = this.value;
-    duree_pause = this.value;
+    duree_pause = this.value*60;
     try{
         localStorage.setItem("duree_pause", duree_pause);
     } catch (error){
